@@ -6,10 +6,10 @@
     <title>@yield('title', 'Fumetti')</title>
     @vite('resources/js/app.js')
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100 bg-dark text-white">
     @include('partials.header')
 
-    <main class="container py-4">
+    <main class="flex-grow-1 container py-4">
         @yield('content')
     </main>
 
