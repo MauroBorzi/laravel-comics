@@ -1,0 +1,90 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@import "bootstrap/scss/bootstrap";
+
+// Variabili personalizzate (opzionale)
+$primary-color: #0c7cec;
+$dark: #1c1c1c;
+
+// Stili globali
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: $dark;
+    color: white;
+}
+
+// Header
+.site-header {
+    background-color: $primary-color;
+    padding: 1rem 0;
+    text-align: center;
+
+    h1 {
+        font-size: 2rem;
+        color: white;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        li a {
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// Comics grid
+.comics-grid {
+    @extend .row;
+    margin-top: 2rem;
+
+    .comic-card {
+        @extend .col-md-3;
+        @extend .mb-4;
+        background-color: #222;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 0.25rem;
+        }
+
+        h3 {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+        }
+    }
+}
+
+// Footer
+.site-footer {
+    background-color: #0a5dc2;
+    padding: 1rem 0;
+    text-align: center;
+}
