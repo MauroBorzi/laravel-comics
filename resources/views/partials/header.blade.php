@@ -11,7 +11,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ms-auto">
                   <li class="nav-item"><a class="nav-link active" href="{{ route('comics.home') }}">Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{{ route('news.index') }}">News</a></li>
               </ul>
           </div>
       </div>
